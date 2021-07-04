@@ -4,7 +4,7 @@ Description: object detector which identifies the classes of the objects in
              an image or video.
 By:- Shashank GS
 (Project implemented during my internship period in The Sparks Foundation)
-(Task 1 part 1)
+(Task 1)
 """""""""""""""""""""""""""""""""""""""""""""
 #importing the required libraries
 import numpy as np
