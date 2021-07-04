@@ -20,8 +20,7 @@ classNames = []
 with open('coco.names','r') as f:
     classNames = f.read().splitlines()
 
-#setting the standard font and random color array
-font = cv2.FONT_HERSHEY_PLAIN
+#setting the random color array
 Colors = np.random.uniform(0, 255, size=(len(classNames), 3))
 
 """
@@ -57,7 +56,7 @@ while True:
             x,y,w,h = box[0],box[1],box[2],box[3]
             cv2.rectangle(img, (x,y), (x+w,y+h), color, thickness=2)
             cv2.putText(img, classNames[classIds[i][0]-1]+" "+confidence,(x+10,y+20),
-                        font,1,color,2)
+                        cv2.FONT_HERSHEY_PLAIN,1,color,2)
     cv2.imshow("Output",img)
     k=cv2.waitKey(10)
     if k==27:
